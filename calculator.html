@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Glassmorphism Calculator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <!-- Calculator Main Body -->
+        <div class="calculator">
+            <div class="calc-header">
+                <div class="app-title">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>CalcPro</span>
+                </div>
+                <button class="history-toggle-btn" id="toggleHistoryBtn" title="Toggle History">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </button>
+            </div>
+
+            <!-- Screen / Display Section -->
+            <div class="display-container">
+                <div class="expression-display" id="expressionDisplay"></div>
+                <div class="main-display" id="mainDisplay">0</div>
+            </div>
+
+            <!-- Keypad Buttons -->
+            <div class="keypad">
+                <!-- Row 1 -->
+                <button class="btn btn-action" data-action="clear">AC</button>
+                <button class="btn btn-action" data-action="backspace"><i class="fa-solid fa-backspace"></i></button>
+                <button class="btn btn-action" data-action="percent">%</button>
+                <button class="btn btn-operator" data-action="operator" data-value="/">÷</button>
+
+                <!-- Row 2 -->
+                <button class="btn btn-num" data-value="7">7</button>
+                <button class="btn btn-num" data-value="8">8</button>
+                <button class="btn btn-num" data-value="9">9</button>
+                <button class="btn btn-operator" data-value="*">×</button>
+
+                <!-- Row 3 -->
+                <button class="btn btn-num" data-value="4">4</button>
+                <button class="btn btn-num" data-value="5">5</button>
+                <button class="btn btn-num" data-value="6">6</button>
+                <button class="btn btn-operator" data-value="-">−</button>
+
+                <!-- Row 4 -->
+                <button class="btn btn-num" data-value="1">1</button>
+                <button class="btn btn-num" data-value="2">2</button>
+                <button class="btn btn-num" data-value="3">3</button>
+                <button class="btn btn-operator" data-value="+">+</button>
+
+                <!-- Row 5 -->
+                <button class="btn btn-action" data-action="toggle-sign">±</button>
+                <button class="btn btn-num" data-value="0">0</button>
+                <button class="btn btn-num" data-value=".">.</button>
+                <button class="btn btn-equals" data-action="calculate">=</button>
+            </div>
+        </div>
+
+        <!-- Sliding History Panel -->
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <button class="clear-history-btn" id="clearHistoryBtn" title="Clear History">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+            <div class="history-list" id="historyList">
+                <div class="empty-history">No history yet</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="calculator.js"></script>
+</body>
+</html>
